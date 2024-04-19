@@ -465,3 +465,7 @@ ul > li {
 .product_look:hover a {
   color: #fff;
 }
+
+.card-btn:hover {
+  background-color: rgb(0, 81, 0);
+}
