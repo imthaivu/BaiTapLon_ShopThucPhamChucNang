@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tin Tức</title>
+    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="icon" href="../img/logo_tab.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="../fonts/fontawesome-free-6.1.1-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+    <script src="../css/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-transform: none;
+        transition: 0.2s linear;
+      }
+
+      /* cau hinh chung */
+
+      .breadcrumb a,
+      .breadcrumb li {
+        color: #000;
+        text-decoration: none;
+        font-size: large;
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      textarea {
+        padding: 20px;
+      }
+      h2,
+      h3 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      /* cau hinh cho anh */
+      .article-img{
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <a href="#" class="logo">
+          <img src="../img/logo.png" alt="Logo Website" />
+        </a>
+        <nav class="navbar">
+          <div class="navbar-item"><a href="home.html">Trang chủ</a></div>
+          <div class="dropdown navbar-item">
+            <a
+              class="dropdown-toggle"
+              href="product1.html"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sản phẩm
+            </a>
+
+            <ul
+              class="dropdown-menu dropdown-menu-item"
+              aria-labelledby="dropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item-pd" href="product1.html">Bổ gan</a>
+              </li>
+              <li>
+                <a class="dropdown-item-pd" href="product2.html">Bổ não</a>
+              </li>
+              <li>
+                <a class="dropdown-item-pd" href="product3.html">Bổ xương </a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-item"><a href="about.html">Giới thiệu</a></div>
+          <div class="navbar-item"><a href="index_blog.html">Tin Tức</a></div>
+          <div class="navbar-item"><a href="contact.html">Liên hệ</a></div>
+        </nav>
+        <div class="icons" style="display: flex">
+          <div class="fas fa-search" id="search-btn"></div>
+          <div class="fas fa-shopping-cart" id="cart-btn">
+            <a href="" class="header__cart-note">3</a>
+          </div>
+          <div class="fas fa-solid fa-user" id="user-btn"></div>
+          <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
+        <div class="search-form">
+          <input type="search" id="search-box" placeholder="Tìm kiếm..." />
+          <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <!-- cart -->
+        <div class="cart-items-container">
+          <a class="cart-item" href="gan2.html">
+            <img src="../img/bogan1.jpg" alt="" />
+            <div class="content">
+              <h3>Ctt Beliver hỗ trợ giải độc</h3>
+              <div class="price">97.200đ</div>
+            </div>
+            <button type="button" class="close-ds" disabled aria-label="Close">
+              x
+            </button>
+          </a>
+          <a class="cart-item" href="gan1.html">
+            <img src="../img/bogan2.jpg" alt="" />
+            <div class="content">
+              <h3>Arginine 500 hỗ trợ giải độc gan</h3>
+              <div class="price">160.000₫</div>
+            </div>
+            <button type="button" class="close-ds" disabled aria-label="Close">
+              x
+            </button>
+          </a>
+          <a class="cart-item" href="gan3.html">
+            <span class="fas fa-items"></span>
+            <img src="../img//bogan3.jpg" alt="" />
+            <div class="content">
+              <h3>Bột sủi Sensa Cools hỗ trợ thanh nhiệt</h3>
+              <div class="price">24.000₫</div>
+            </div>
+            <button type="button" class="close-ds" disabled aria-label="Close">
+              x
+            </button>
+          </a>
+
+          <a href="cart.html" id="btn">Kiểm tra</a>
+        </div>
+
+        <div class="user-content">
+          <div class="user-item">
+            <a href="account.html" class="user-item-content">Trang cá nhân</a>
+          </div>
+          <div class="user-item">
+            <a href="signIn_1.html" class="user-item-content">Đăng ký</a>
+          </div>
+          <div class="user-item">
+            <a href="login_1.html" class="user-item-content">Đăng nhập</a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- Main -->
+
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="breadcrumb list1">
+              <ul class="breadcrumb">
+                <li><a href="home.html">Trang chủ</a></li>
+                <li style="padding: 0"><span style="padding: 0"></span></li>
+                <li><a href="index_blog.html">Tin Tức</a></li>
+                <li style="padding: 0">
+                  <span style="padding: 0 0px"></span>
+                </li>
+                <li>
+                  Đau cột sống lưng là gì? Cách điều trị đau cột sống lưng
+                </li>
+              </ul>
+            </div>
+            <section class="content">
+              <article>
+                <div class="article-main">
+                  <p>
+                    Đau cột sống lưng là gì? Cách điều trị đau cột sống lưng
+                  </p>
+                  <div class="post-time">
+                    " Viết bởi "
+                    <span style="color: #333">VuQuocThai, </span>
+                    10/04/2024
+                  </div>
+                  <div class="article-details">
+                    <div class="article-img">
+                      <img
+                        src="../img/blog.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="description"
+                  style="text-align: justify; font-size: 18px !important"
+                >
+                  <i
+                    ><b class="text-danger">Đau cột sống lưng</b> là bệnh lý phổ
+                    biến hiện nay và đang có xu hướng trẻ hóa. Vậy đau cột sống
+                    lưng là bệnh gì? Triệu chứng, nguyên nhân, cách điều trị như
+                    thế nào? Hãy cùng tìm hiểu chi tiết qua bài viết dưới
+                    đây.</i
+                  >
+                  <div class="mb-3"></div>
+                  <h2>Đau cột sống lưng là gì?</h2>
+                  <p>
+                    <b>Đau cột sống lưng</b> là hiện tượng đĩa đệm và khớp bị
+                    thoái hóa, gai xương phát triển lên trên đốt của cột sống.
+                    Dẫn đến các cơn đau nhói vùng cột sống và làm hạn chế mọi
+                    hoạt động.
+                  </p>
+                  <p style="padding: 20px 0">
+                    Đau cột sống lưng thường gặp ở người già, tuy nhiên chứng
+                    bệnh này đang có xu hướng trẻ hóa dần.
+                  </p>
+                  <p>
+                    Theo một thống kê cho thấy, khoảng 80% trường hợp đau cột
+                    sống lưng đều không rõ nguyên nhân gây bệnh. Đặc biệt, nữ
+                    giới có xu hướng mắc căn bệnh này nhiều hơn nam giới.
+                  </p>
+                  <div class="article-img">
+                    <img src="../img/1703_dau-cot-song-lung.jpg" alt="" />
+                  </div>
+                  <div class="text-center">
+                    <i>Đau cột sống lưng là bênh gì? Có nguy hiểm không? </i>
+                  </div>
+                  <h2>Triệu chứng đau cột sống lưng</h2>
+                  <p>
+                    <b>Triệu chứng đau cột sống lưng</b> có thể do nhiều bệnh lý
+                    khác nhau gây ra. Chính vì thế cần thăm khám và chữa trị kịp
+                    thời để không gây ảnh hưởng nghiêm trọng tới sức khỏe.
+                  </p>
+                  <h3>Thoái hóa cột sống lưng</h3>
+                  <p>
+                    Bệnh thoái hóa cột sống lưng biểu hiện ở việc người bệnh
+                    thường đau ở vùng lưng dưới, cụ thể hơn là vị trí sụn khớp
+                    và đĩa đệm. Cơn đau tăng nhanh khi người bệnh cúi xuống rồi
+                    đứng lên hay vặn mình.
+                  </p>
+                  <h3>Thoát vị đĩa đệm</h3>
+                  <p>
+                    Thoát vị đĩa đệm là tình trạng nhân nhầy của đĩa đệm cột
+                    sống lệch khỏi vị trí ban đầu và chèn ép lên các dây thần
+                    kinh xung quanh. Dẫn tới tình trạng đau cột sống lưng và ở
+                    bất kỳ vị trí nào trên cột sống, nặng hơn là lan xuống chân.
+                  </p>
+                </div>
+                <hr style="margin-top: 70px" />
+              </article>
+              <div class="review-form">
+                <h3 style="padding-bottom: 10px; padding-top: 20px">
+                  Viết bình luận của bạn
+                </h3>
+                <form action="">
+                  <div class="form-group">
+                    <label for="cmt" style="font-size: 1.8rem"
+                      >Nhận xét của bạn*</label
+                    >
+                    <textarea
+                      style="width: 100%; border: 1px solid; font-size: 1.3rem"
+                      name="cmt"
+                      id="cmt"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <!-- <label for="name">Tên*</label> -->
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Name*"
+                      style="border: 1px solid; font-size: 1.5rem"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <!-- <label for="email">Email*</label> -->
+                    <input
+                      type="text"
+                      id="email"
+                      placeholder="Email*"
+                      style="border: 1px solid; font-size: 1.5rem"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    style="
+                      border: 1px solid;
+                      font-size: 1.5rem;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    Gửi bình luận
+                  </button>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid">
+      <section id="footer">
+        <div class="footer__top section__font">
+          <div class="container">
+            <hr style="width: 100%; margin-bottom: 50px" />
+            <div class="row">
+              <div class="col">
+                <div class="item_link_footer mb-4">
+                  <h2 class="tt_footer text-uppercase">hỗ trợ khách hàng</h2>
+                </div>
+                <div
+                  class="item_link_footer text-danger"
+                  style="font-size: large"
+                >
+                  <div class="txt_color_2">
+                    Hotline: <strong>1800 6324</strong>
+                  </div>
+                  (miễn phí , 08-22h kể cả T7, CN)
+                </div>
+                <div class="item_link_footer">
+                  <a rel="#" href="#" target="_blank" class="txt_link_hasaki"
+                    >Các câu hỏi thường gặp</a
+                  >
+                </div>
+                <div class="item_link_footer">
+                  <a rel="#" href="#" target="_blank" class="txt_link_hasaki"
+                    >Gửi yêu cầu hỗ trợ</a
+                  >
+                </div>
+                <div class="item_link_footer">
+                  <a rel="#" href="#" target="_blank" class="txt_link_hasaki"
+                    >Hướng dẫn đặt hàng</a
+                  >
+                </div>
+                <div class="item_link_footer">
+                  <a rel="#" href="#" target="_blank" class="txt_link_hasaki"
+                    >Phương thức vận chuyển</a
+                  >
+                </div>
+                <div class="item_link_footer">
+                  <a rel="#" href="#" target="_blank" class="txt_link_hasaki"
+                    >Chính sách đổi trả</a
+                  >
+                </div>
+              </div>
+              <div class="col">
+                <h3 class="Title_footer">VỀ THỰC PHẨM CHỨC NĂNG THÁI</h3>
+                <a class="footer_tag" href="home.html">Trang chủ</a>
+                <br />
+                <a class="footer_tag" href="product1.html">Sản phẩm</a><br />
+                <a class="footer_tag" href="about.html">Giới thiệu</a><br />
+                <a class="footer_tag" href="blog.html">Tin Tức</a><br />
+                <a class="footer_tag" href="contact.html">Liên hệ</a><br />
+              </div>
+              <div class="col">
+                <h3 class="Title_footer">THEO DÕI CHÚNG TÔI</h3>
+                <a class="footer_tag" href="#"
+                  ><i class="fa-icon fa-brands fa-facebook"></i>Facebook</a
+                >
+                <br />
+                <a class="footer_tag" href="#"
+                  ><i class="fa-icon fa-brands fa-instagram"></i>Instagram</a
+                ><br />
+                <a class="footer_tag" href="#"
+                  ><i class="fa-icon fa-brands fa-tiktok"></i>Tiktok</a
+                ><br />
+              </div>
+              <div class="col">
+                <h3 class="Title_footer">ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI</h3>
+                <div class="email-transform">
+                  <input
+                    type="email"
+                    class="email-transform-item"
+                    id="colFormLabel"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="submit_btn">
+                  <button type="submit" class="btn_w btn btn-primary">
+                    <span>Submit</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="grid">
+            <p class="footer__text">
+              © 2023 - Bản quyền Vũ Quốc Thái môn HT CN WEB
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- js file link-->
+    <script src="../js/header.js"></script>
+  </body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tin Tức</title>
+    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="icon" href="../img/logo_tab.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="../fonts/fontawesome-free-6.1.1-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+    <script src="../css/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-transform: none;
+        transition: 0.2s linear;
+      } /* cau hinh chung */
+      textarea {
+        padding: 20px;
+      }
+      .breadcrumb a,
+      .breadcrumb li {
+        color: #000;
+        text-decoration: none;
+        font-size: large;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      h2,
+      h3 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      .article-img{
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <a href="#" class="logo">
+          <img src="../img/logo.png" alt="Logo Website" />
+        </a>
+        <nav class="navbar">
+          <div class="navbar-item"><a href="home.html">Trang chủ</a></div>
+          <div class="dropdown navbar-item">
+            <a
+              class="dropdown-toggle"
+              href="product1.html"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sản phẩm
+            </a>
+
+            <ul
+              class="dropdown-menu dropdown-menu-item"
+              aria-labelledby="dropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item-pd" href="product1.html">Bổ gan</a>
+              </li>
+              <li>
+                <a class="dropdown-item-pd" href="product2.html">Bổ não</a>
+              </li>
+              <li>
+                <a class="dropdown-item-pd" href="product3.html">Bổ xương </a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-item"><a href="about.html">Giới thiệu</a></div>
+          <div class="navbar-item"><a href="index_blog.html">Tin Tức</a></div>
+          <div class="navbar-item"><a href="contact.html">Liên hệ</a></div>
+        </nav>
+        <div class="icons" style="display: flex">
+          <div class="fas fa-search" id="search-btn"></div>
+          <div class="fas fa-shopping-cart" id="cart-btn">
+            <a href="" class="header__cart-note">3</a>
+          </div>
+          <div class="fas fa-solid fa-user" id="user-btn"></div>
+          <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
+        <div class="search-form">
+          <input type="search" id="search-box" placeholder="Tìm kiếm..." />
+          <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <!-- cart -->
+        <div class="cart-items-container">
+          <a class="cart-item" href="gan2.html">
+            <img src="../img/bogan1.jpg" alt="" />
+            <div class="content">
+              <h3>Ctt Beliver hỗ trợ giải độc</h3>
+              <div class="price">97.200đ</div>
+            </div>
+            <button type="button" class="close-ds" disabled aria-label="Close">
+              x
+            </button>
+          </a>
+          <a class="cart-item" href="gan1.html">
+            <img src="../img/bogan2.jpg" alt="" />
+            <div class="content">
+              <h3>Arginine 500 hỗ trợ giải độc gan</h3>
+              <div class="price">160.000₫</div>
+            </div>
+            <button type="button" class="close-ds" disabled aria-label="Close">
+              x
+            </button>
+          </a>
+          <a class="cart-item" href="gan3.html">
+            <span class="fas fa-items"></span>
+            <img src="../img//bogan3.jpg" alt="" />
+            <div class="content">
+              <h3>Bột sủi Sensa Cools hỗ trợ thanh nhiệt</h3>
+              <div class="price">24.000₫</div>
+            </div>
+            <button type="button" class="close-ds" disabled aria-label="Close">
+              x
+            </button>
+          </a>
+
+          <a href="cart.html" id="btn">Kiểm tra</a>
+        </div>
+
+        <div class="user-content">
+          <div class="user-item">
+            <a href="account.html" class="user-item-content">Trang cá nhân</a>
+          </div>
+          <div class="user-item">
+            <a href="signIn_1.html" class="user-item-content">Đăng ký</a>
+          </div>
+          <div class="user-item">
+            <a href="login_1.html" class="user-item-content">Đăng nhập</a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- Main -->
+
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="breadcrumb list1">
+              <ul class="breadcrumb">
+                <li><a href="home.html">Trang chủ</a></li>
+                <li style="padding: 0"><span style="padding: 0"></span></li>
+                <li><a href="index_blog.html">Tin tức</a></li>
+                <li style="padding: 0">
+                  <span style="padding: 0 0px"></span>
+                </li>
+                <li>
+                  Massage body toàn thân là gì? 7 bước thực hiện tại nhà đơn
+                  giản
+                </li>
+              </ul>
+            </div>
+            <section class="content">
+              <article>
+                <div class="article-main">
+                  <p>
+                    Massage body toàn thân là gì? 7 bước thực hiện tại nhà đơn
+                    giản
+                  </p>
+                  <div class="post-time">
+                    " Viết bởi "
+                    <span style="color: #333">Vu Quoc Thai, </span>
+                    10/04/2024
+                  </div>
+                  <div class="article-details">
+                    <div class="article-img">
+                      <img
+                        src="../img/blog3.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="description"
+                  style="text-align: justify; font-size: 18px !important"
+                >
+                  <p>
+                    <b class="text-danger">Massage body toàn thân</b> mang đến
+                    những tác dụng bất ngờ cho cơ thể. Là liệu pháp an toàn và
+                    hiệu quả, giúp xoa dịu đau nhức, giải tỏa căng thẳng, mệt
+                    mỏi, thư giãn tinh thần. Cùng tìm hiểu chi tiết về phương
+                    pháp này và 7 bước thực hiện qua bài viết dưới đây.
+                  </p>
+                  <h2>Massage body toàn thân là gì?</h2>
+                  <p>
+                    <b>Massage body toàn thân</b> được thực hiện bằng cách dùng
+                    lực tác động nhẹ nhàng lên toàn bộ cơ thể. Bao gồm các động
+                    tác như xoa bóp, đấm bóp, nhấn, day miết, vỗ, gõ, lăn… giúp
+                    cho toàn thân được thư giãn
+                  </p>
+                  <p>
+                    Theo quan niệm từ xa xưa của người Hy Lạp, trong cơ thể con
+                    người có những dòng năng lượng khác nhau, luôn luôn lưu
+                    chuyển và tác động trực tiếp đến cơ thể. Cơ thể chỉ khỏe
+                    mạnh, dẻo dai khi dòng khí này được lưu thông tốt, nếu không
+                    cơ thể sẽ bị suy nhược và yếu dần.
+                  </p>
+                  <p>
+                    Massage body toàn thân chính là liệu pháp hữu hiệu giúp vận
+                    chuyển dòng khí này được thông suốt trong cơ thể, mang đến
+                    một thể trạng khỏe mạnh, tinh thần trở lên khoan khoái, sảng
+                    khoái hơn.
+                  </p>
+                  <h2>Lợi ích massage body toàn thân đối với sức khỏe</h2>
+                  <p>
+                    Massage body toàn thân mang đến nhiều lợi ích đối với sức
+                    khỏe. Cụ thể:
+                  </p>
+                  <h3>Giảm đau nhức cơ bắp</h3>
+                  <p>
+                    Massage body toàn thân có tác dụng hiệu quả trong việc giảm
+                    đau nhức cơ bắp. Các động tác massage, bấm huyệt giúp cho cơ
+                    bắp đang căng cứng sẽ giãn ra, các dây thần kinh cũng được
+                    thả lỏng. Quá trình lưu thông máu đến các chi diễn ra tốt
+                    hơn. Từ đó, cơ bắp được thư giãn hoàn toàn, tình trạng đau
+                    mỏi cũng thuyên giảm.
+                  </p>
+                  <h3>Thư giãn tinh thần, giảm căng thẳng</h3>
+                  <p>
+                    Massage body toàn thân còn giúp giảm các triệu chứng tâm lý
+                    như trầm cảm, căng thẳng và lo lắng . Khi cơ thể bị căng
+                    thẳng sẽ giải phóng hormone cortisol làm tăng huyết áp và ức
+                    chế hệ thống miễn dịch. Các động tác xoa bóp giúp giải phóng
+                    các hormone cortisol, dopamine và serotonin giúp giảm lo âu,
+                    trầm cảm và lo lắng. Toàn thân được thư giãn, tinh thần sảng
+                    khoái, thoải mái.
+                  </p>
+                  <h3>Cải thiện lưu thông máu</h3>
+                  <p>
+                    Các thao tác massage body nhẹ nhàng giúp kích thích hệ thần
+                    kinh trong cơ thể được thư giãn và giúp cải thiện lưu lượng
+                    máu trong cơ thể. Các động tác massage tác động lên mô mềm
+                    và cơ trong cơ thể giúp đẩy máu đi khắp cơ thể và giảm áp
+                    lực cho hệ tim mạch, cho lượng oxy đến phổi nhiều hơn.
+                  </p>
+                  <p>
+                    Đặc biệt, mát xa chân được biết đến với khả năng giảm tê bì,
+                    đau buốt chân hiệu quả, đào thải độc tố trong cơ thể, tăng
+                    khả năng vận chuyển oxy và máu đến các chi.
+                  </p>
+                  <div class="article-img">
+                  <img src="../img/1403_massage_body_toan_than.jpg" alt="" />
+
+                  </div>
+                  <div style="text-align: center">
+                    <i
+                      >Massage body toàn thân giúp cơ thể khỏe mạnh hơn và tinh
+                      thần thư thái</i
+                    >
+                  </div>
+                </div>
+                <hr style="margin-top: 70px" />
+              </article>
+              <div class="review-form">
+                <h3 style="padding-bottom: 10px; padding-top: 20px">
+                  Viết bình luận của bạn
+                </h3>
+                <form action="">
+                  <div class="form-group">
+                    <label for="cmt" style="font-size: 1.8rem"
+                      >Nhận xét của bạn*</label
+                    >
+                    <textarea
+                      style="width: 100%; border: 1px solid; font-size: 1.3rem"
+                      name="cmt"
+                      id="cmt"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <!-- <label for="name">Tên*</label> -->
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Name*"
+                      style="border: 1px solid; font-size: 1.5rem"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <!-- <label for="email">Email*</label> -->
+                    <input
+                      type="text"
+                      id="email"
+                      placeholder="Email*"
+                      style="border: 1px solid; font-size: 1.5rem"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    style="
+                      border: 1px solid;
+                      font-size: 1.5rem;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    Gửi bình luận
+                  </button>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid">
+      <section id="footer">
+        <div class="footer__top section__font">
+          <div class="container">
+            <hr style="width: 100%; margin-bottom: 50px" />
+            <div class="row">
+              <div class="col">
+                <div class="item_link_footer mb-4">
+                  <h2 class="tt_footer text-uppercase">hỗ trợ khách hàng</h2>
+                </div>
+                <div
+                  class="item_link_footer text-danger"
+                  style="font-size: large"
+                >
+                  <div class="txt_color_2">
+                    Hotline: <strong>1800 6324</strong>
+                  </div>
+                  (miễn phí , 08-22h kể cả T7, CN)
+                </div>
+                <div class="item_link_footer">
+                  <a rel="#" href="#" target="_blank" class="txt_link_hasaki"
+                    >Các câu hỏi thường gặp</a
+                  >
+                </div>
+                <div class="item_link_footer">
+                  <a rel="#" href="#" target="_blank" class="txt_link_hasaki"
+                    >Gửi yêu cầu hỗ trợ</a
+                  >
+                </div>
+                <div class="item_link_footer">
+                  <a rel="#" href="#" target="_blank" class="txt_link_hasaki"
+                    >Hướng dẫn đặt hàng</a
+                  >
+                </div>
+                <div class="item_link_footer">
+                  <a rel="#" href="#" target="_blank" class="txt_link_hasaki"
+                    >Phương thức vận chuyển</a
+                  >
+                </div>
+                <div class="item_link_footer">
+                  <a rel="#" href="#" target="_blank" class="txt_link_hasaki"
+                    >Chính sách đổi trả</a
+                  >
+                </div>
+              </div>
+              <div class="col">
+                <h3 class="Title_footer">VỀ THỰC PHẨM CHỨC NĂNG THÁI</h3>
+                <a class="footer_tag" href="home.html">Trang chủ</a>
+                <br />
+                <a class="footer_tag" href="product1.html">Sản phẩm</a><br />
+                <a class="footer_tag" href="about.html">Giới thiệu</a><br />
+                <a class="footer_tag" href="blog.html">Tin Tức</a><br />
+                <a class="footer_tag" href="contact.html">Liên hệ</a><br />
+              </div>
+              <div class="col">
+                <h3 class="Title_footer">THEO DÕI CHÚNG TÔI</h3>
+                <a class="footer_tag" href="#"
+                  ><i class="fa-icon fa-brands fa-facebook"></i>Facebook</a
+                >
+                <br />
+                <a class="footer_tag" href="#"
+                  ><i class="fa-icon fa-brands fa-instagram"></i>Instagram</a
+                ><br />
+                <a class="footer_tag" href="#"
+                  ><i class="fa-icon fa-brands fa-tiktok"></i>Tiktok</a
+                ><br />
+              </div>
+              <div class="col">
+                <h3 class="Title_footer">ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI</h3>
+                <div class="email-transform">
+                  <input
+                    type="email"
+                    class="email-transform-item"
+                    id="colFormLabel"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="submit_btn">
+                  <button type="submit" class="btn_w btn btn-primary">
+                    <span>Submit</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="grid">
+            <p class="footer__text">
+              © 2023 - Bản quyền Vũ Quốc Thái môn HT CN WEB
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- js file link-->
+    <script src="../js/header.js"></script>
+  </body>
+</html>

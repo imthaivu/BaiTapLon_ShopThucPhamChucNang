@@ -1,0 +1,240 @@
+.breadcrumb ul li a,
+.breadcrumb ul li a:hover {
+  font-family: "Open Sans", HelveticaNeue, "Helvetica Neue", sans-serif;
+}
+.blog-item,
+.breadcrumb ul {
+  display: flex;
+}
+.blog-item-name,
+.title {
+  color: green;
+  font-size: 2.8rem;
+}
+.btn,
+.title {
+  text-align: justify;
+}
+.breadcrumb ul,
+.nav-category,
+.nav-category ul {
+  list-style: none;
+}
+.aside-item .tag-item a,
+.btn a {
+  font-size: 15px;
+  text-decoration: none;
+}
+.breadcrumb ul li a,
+.btn a,
+.name-right a,
+.nav-category ul li a {
+  text-decoration: none;
+}
+.main,
+.thumbnail img,
+footer {
+  width: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+.container {
+  max-width: 1920px;
+  margin-top: 95px;
+}
+.main {
+  border-top: 1px solid #2b303b;
+  margin-top: 10px;
+}
+.main .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.breadcrumb {
+  padding: 50px 0;
+}
+.breadcrumb ul li a {
+  color: #000;
+  font-size: 17px;
+}
+.breadcrumb ul li a:hover {
+  color: green;
+  font-weight: 700;
+}
+.article-right {
+  width: 100%;
+  display: flex;
+}
+.blog-item {
+  overflow: hidden;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px dotted #ccc;
+}
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+}
+.aside-item .tag-item a,
+.aside-title,
+.blog-item-name {
+  font-family: "Open Sans", HelveticaNeue, "Helvetica Neue", sans-serif;
+}
+.thumbnail {
+  width: 40%;
+}
+.blog-item-info {
+  width: 60%;
+  padding-left: 20px;
+}
+.blog-item-name {
+  letter-spacing: 0.5px;
+
+  padding-bottom: 10px;
+}
+.post-time {
+  color: #898989;
+  font-size: 0.92857em;
+  margin-bottom: 15px;
+}
+.blog-item-summary {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #7d7d7d;
+  line-height: 20px;
+}
+.btn {
+  width: 120px;
+  height: 37px;
+  border: 1px solid green;
+  background-color: green;
+}
+.btn a {
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.btn:hover {
+  background-color: #000;
+}
+aside {
+  width: 30%;
+  float: left;
+  padding-left: 40px;
+}
+.aside-item {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ebebeb;
+}
+.aside-item .aside-content {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+.aside-title {
+  font-size: 25px;
+  margin: 0;
+  font-weight: 300;
+  color: #252525;
+  line-height: 1.18;
+}
+.nav-category {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.nav-category span {
+  color: #333;
+  padding-right: 2px;
+}
+.nav-category ul li {
+  position: relative;
+  clear: left;
+  font-size: 1.5em;
+  padding: 18px 0 13px 10px;
+  border-bottom: 1px dotted #e1e1e1;
+}
+.nav-category ul li:last-child {
+  border-bottom: none;
+}
+.nav-category ul li a {
+  font-size: 1.14286em;
+  padding: 0;
+  white-space: inherit;
+  color: green;
+}
+.aside-item .tag-item {
+  line-height: 40px;
+  border: 1px solid #ebebeb;
+  height: 40px;
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+.aside-item .tag-item a {
+  color: green;
+}
+.aside-item .tag-item a:hover,
+.ft a.xs-block:hover {
+  color: #333;
+}
+.aside-item .loop-blog {
+  overflow: hidden;
+  padding: 10px 0 5px;
+}
+.thumb-left img {
+  width: 90px;
+  max-width: 90px;
+  height: auto;
+  display: block;
+  float: left;
+}
+.name-right {
+  display: block;
+  float: left;
+  width: calc(100% - 100px);
+  margin-left: 10px;
+}
+.name-right a {
+  line-height: 22px;
+  word-break: break-word;
+  font-weight: 300;
+  color: green;
+}
+footer {
+  clear: both;
+  border-top: 1px solid #333;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+footer .ft {
+  max-width: 780px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+.ft p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.ft a.xs-block {
+  color: green;
+  margin: 0 5px;
+}
+.col-md-7 .container {
+  margin: 0;
+}

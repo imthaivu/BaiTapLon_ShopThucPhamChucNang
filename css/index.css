@@ -1,0 +1,136 @@
+.header__icon,
+.header_nav,
+.menu_child {
+  font-size: 20px;
+}
+.web {
+  background-color: #fff;
+}
+.img_logo {
+  width: 100px;
+  height: 100px;
+}
+#header__search {
+  padding: 45px 30px;
+}
+#form__size {
+  height: 35px;
+  font-size: 15px;
+}
+.header__icon {
+  padding: 45px 15px;
+  color: #000;
+}
+.menu_child {
+  text-align: center;
+}
+#hight__icon {
+  padding: 10px;
+}
+.menu__icon {
+  font-size: 15px;
+}
+#nav__width {
+  padding-right: 20px;
+}
+#mainWeb {
+  height: 100px;
+  background-color: #ffebcd;
+}
+.section__font {
+  background-color: #f7f7f7;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.section__pd {
+  padding: 5px 0;
+  border: 1px solid #333;
+  border-collapse: collapse;
+}
+.border_qr,
+.border_qr-app {
+  border: 2px solid rgba(141, 123, 123, 0.774);
+  margin-bottom: 6px;
+}
+ul > li {
+  list-style: none;
+}
+.footer_tag {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+.footer_tag:hover {
+  color: rgba(231, 130, 15, 0.774);
+}
+.fa-icon {
+  padding-right: 10px;
+}
+.border_qr {
+  height: 105px;
+  width: 105px;
+  padding: 5px;
+}
+.qr {
+  width: 90px;
+  height: 90px;
+}
+.border_qr-app {
+  height: 30px;
+  width: 115px;
+  padding: 4px;
+  margin-left: -10px;
+}
+.footer__text {
+  text-align: center;
+  font-size: 15px;
+  padding: 15px 0;
+}
+@media (min-width: 350px) and (max-width: 765px) {
+  .Title_footer {
+    padding-top: 25px;
+  }
+  .Title_footer-dow {
+    margin-left: -15px;
+  }
+  .col_footer-link {
+    margin-left: -50px;
+  }
+  .border_qr {
+    height: 102px;
+    width: 103px;
+    margin-left: -25px;
+  }
+  .border_qr-app {
+    margin-left: -60%;
+  }
+}
+@media (min-width: 766px) and (max-width: 992px) {
+  .Title_footer-dow,
+  .border_qr,
+  .col_footer-link {
+    margin-left: -15px;
+  }
+  .Title_footer {
+    padding-top: 25px;
+  }
+  .border_qr {
+    height: 102px;
+    width: 103px;
+    margin-bottom: 6px;
+  }
+  .col_footer-link {
+    margin-top: 10px;
+  }
+  .border_qr-app {
+    margin-left: -14%;
+  }
+}
+@media (max-width: 1024px) {
+  .col_footer-link {
+    margin-top: 10px;
+  }
+  .border_qr {
+    margin-bottom: 6px;
+  }
+}
