@@ -350,19 +350,16 @@
                 <h2>Giá: <span class="text-danger">374.000₫ /Lọ</span></h2>
               </div>
               <!-- so luong -->
-              <div>
-                <b style="font-size: 160%">Số lượng</b>
+              <div class="quantity-control">
+                <button onclick="decreaseQuantity()">-</button>
                 <input
-                  style="
-                    width: 30px;
-                    outline: none;
-                    margin-left: 25%;
-                    font-size: 190%;
-                  "
+                  id="quantityInput"
                   type="number"
                   value="1"
                   min="1"
+                  oninput="validity.valid||(value='1');"
                 />
+                <button onclick="increaseQuantity()">+</button>
               </div>
               <!-- dat mua -->
               <div class="datmua row">
