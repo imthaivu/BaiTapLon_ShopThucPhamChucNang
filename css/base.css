@@ -170,3 +170,8 @@ body {
   height: 30px;
   border-radius: 10px;
 }
+
+.hover-sp:hover {
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
