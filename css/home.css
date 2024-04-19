@@ -288,7 +288,7 @@
   font-weight: 600;
 }
 .product_look {
-  border: 1px solid #e9ae51;
+  border: 1px solid blue;
   margin: 20px auto 0;
   width: 130px;
   text-align: center;
@@ -296,7 +296,7 @@
 }
 .product_look > a {
   text-decoration: none;
-  color: #e9ae51;
+  color: blue;
   font-size: 2rem;
 }
 .col-transform {
@@ -408,7 +408,7 @@ ul > li {
   margin-top: 2px;
 }
 .footer_tag:hover {
-  color: rgba(231, 130, 15, 0.774);
+  color: green;
   padding-left: 10px;
 }
 .fa-icon {
@@ -457,4 +457,11 @@ ul > li {
   .header .cart-items-container.active {
     right: 0;
   }
+}
+
+.product_look:hover {
+  background-color: blue;
+}
+.product_look:hover a {
+  color: #fff;
 }
