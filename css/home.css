@@ -497,3 +497,22 @@ input[type="number"] {
   color: #333;
   outline: none;
 }
+/* footer */
+@media (max-width: 768px) {
+  .col-md-3 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .Title_footer {
+    font-size: 16px;
+  }
+
+  .email-transform {
+    flex-direction: column;
+  }
+
+  .submit_btn {
+    text-align: left;
+  }
+}
