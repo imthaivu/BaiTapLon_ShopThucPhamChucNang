@@ -181,38 +181,6 @@
         </div>
         <!-- cart -->
         <div class="cart-items-container">
-          <a class="cart-item" href="gan2.html">
-            <img src="../img/bogan1.jpg" alt="" />
-            <div class="content">
-              <h3>Ctt Beliver hỗ trợ giải độc</h3>
-              <div class="price">97.200đ</div>
-            </div>
-            <button type="button" class="close-ds" disabled aria-label="Close">
-              x
-            </button>
-          </a>
-          <a class="cart-item" href="gan1.html">
-            <img src="../img/bogan2.jpg" alt="" />
-            <div class="content">
-              <h3>Arginine 500 hỗ trợ giải độc gan</h3>
-              <div class="price">160.000₫</div>
-            </div>
-            <button type="button" class="close-ds" disabled aria-label="Close">
-              x
-            </button>
-          </a>
-          <a class="cart-item" href="gan3.html">
-            <span class="fas fa-items"></span>
-            <img src="../img//bogan3.jpg" alt="" />
-            <div class="content">
-              <h3>Bột sủi Sensa Cools hỗ trợ thanh nhiệt</h3>
-              <div class="price">24.000₫</div>
-            </div>
-            <button type="button" class="close-ds" disabled aria-label="Close">
-              x
-            </button>
-          </a>
-
           <a href="cart.html" id="btn">Kiểm tra</a>
         </div>
 
@@ -368,6 +336,7 @@
               <!-- dat mua -->
               <div class="datmua row">
                 <button
+                  id="btnAddToCart"
                   class="btn btn-light btn-outline-success col-5 p-3"
                   type="button"
                   style="
@@ -514,5 +483,120 @@
     </div>
     <!-- js file link-->
     <script src="../js/header.js"></script>
+
+    <script>
+      // Xử lý thêm item vào local storage và cập nhật số lượng item trên icon cart
+      const btnAddToCart = document.getElementById("btnAddToCart");
+      const cartItemsContainer = document.querySelector(
+        ".cart-items-container"
+      );
+      const cartItems = cartItemsContainer.querySelectorAll(".cart-item");
+      const cartNote = document.querySelector(".header__cart-note");
+
+      // Xử lý thêm item vào local storage
+      btnAddToCart.addEventListener("click", () => {
+        const quantityInput = document.getElementById("quantityInput");
+        const quantity = parseInt(quantityInput.value);
+        const product = {
+          name: "Arginine 500 hỗ trợ giải độc gan, bổ gan",
+          price: 160000,
+          quantity: quantity,
+          imgSrc: "../img/bogan2.jpg",
+        };
+        let cartItemsData = JSON.parse(localStorage.getItem("cartItems")) || [];
+        let isExist = false;
+        cartItemsData.forEach((item) => {
+          if (item.name === product.name) {
+            item.quantity += product.quantity;
+            isExist = true;
+          }
+        });
+        if (!isExist) {
+          cartItemsData.push(product);
+        }
+        localStorage.setItem("cartItems", JSON.stringify(cartItemsData));
+        cartNote.textContent = cartItemsData.length;
+        cartItemsContainer.innerHTML = "";
+        cartItemsData.forEach((item) => {
+          const cartItem = document.createElement("a");
+          cartItem.classList.add("cart-item");
+          cartItem.href = "gan2.html";
+          cartItem.innerHTML = `
+            <img src="${item.imgSrc}" alt="" />
+            <div class="content">
+              <h3>${item.name}</h3>
+              <div class="price">${item.price.toLocaleString()}đ</div>
+            </div>
+            <button type="button" class="close-ds" disabled aria-label="Close">x</button>
+          `;
+          cartItemsContainer.appendChild(cartItem);
+        });
+      });
+
+      // Xử lý tăng giảm số lượng item
+      function increaseQuantity() {
+        const quantityInput = document.getElementById("quantityInput");
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+      }
+
+      function decreaseQuantity() {
+        const quantityInput = document.getElementById("quantityInput");
+        if (parseInt(quantityInput.value) > 1) {
+          quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+      }
+
+      // Xử lý hiển thị số lượng item trên icon cart
+      const cartItemsData = JSON.parse(localStorage.getItem("cartItems")) || [];
+      cartNote.textContent = cartItemsData.length;
+
+      // Xử lý xóa item khỏi local storage
+      cartItemsContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("close-ds")) {
+          const index = e.target.getAttribute("data-index");
+          cartItemsData.splice(index, 1);
+          localStorage.setItem("cartItems", JSON.stringify(cartItemsData));
+          cartItemsContainer.innerHTML = "";
+          cartItemsData.forEach((item) => {
+            const cartItem = document.createElement("a");
+            cartItem.classList.add("cart-item");
+            cartItem.href = "gan1.html";
+            cartItem.innerHTML = `
+              <img src="${item.imgSrc}" alt="" />
+              <div class="content">
+                <h3>${item.name}</h3>
+                <div class="price">${item.price.toLocaleString()}đ</div>
+              </div>
+              <button data-index="${cartItemsData.indexOf(
+                item
+              )}" type="button" class="close-ds" aria-label="Close">x</button>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+          });
+          cartNote.textContent = cartItemsData.length;
+        }
+      });
+
+      // Xử lý hiển thị item trên icon cart
+      cartItemsData.forEach((item) => {
+        const cartItem = document.createElement("a");
+        cartItem.classList.add("cart-item");
+        cartItem.href = "gan2.html";
+        cartItem.innerHTML = `
+          <img src="${item.imgSrc}" alt="" />
+          <div class="content">
+            <h3>${item.name}</h3>
+            <div class="price">${item.price.toLocaleString()}đ</div>
+          </div>
+          <button data-index="${cartItemsData.indexOf(
+            item
+          )}" type="button" class="close-ds" aria-label="Close">x</button>
+        `;
+        cartItemsContainer.appendChild(cartItem);
+      });
+
+      // Xử lý hiển thị số lượng item trên icon cart
+      cartNote.textContent = cartItemsData.length;
+    </script>
   </body>
 </html>
